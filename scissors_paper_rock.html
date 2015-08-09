@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scissors Paper Rock Alpha V 0.4</title>
+	<script type="text/javascript" src="scissors_paper_rock	.js"></script>
+	<link rel="stylesheet" type="text/css" href="scissors_paper_rock.css">
+</head>
+<body>
+	
+	<h1>SPR Clicker</h1>
+	
+	<div id="main">
+		<div id="playField">
+			<button id="s" onclick="choose('scissors')"><img id="spr" src="scissors.png"></button>
+			<button id="p" onclick="choose('paper')"><img id="spr"src="paper.png"></button>
+			<button id="r" onclick="choose('rock')"><img id="spr" src="rock.png"></button>
+					
+			<p id="looseorwin">Choose</p>
+			<p id="comdis"><img id="comspr" src="rock.png"></p>
+		</div>
+		<div id="buyingSpace">
+			<div id="openButtonContainer">
+				<button class="text openTabsButtons openTabs" id="openBuyTab" onclick="changeTab('openBuyTab'); showTab('buyTab')">B</button>
+				<button class="text openTabsButtons" id="openUpgradeTab" onclick="changeTab('openUpgradeTab'); showTab('upgradeTab')">U</button>
+				<button class="text openTabsButtons" id="openStatsTab" onclick="changeTab('openStatsTab'); showTab('statsTab')">S</button>
+			</div>
+			<div id="buyTab">
+					<button class="buyButtons" id="addBetStation" onclick="newBetStation()"><span title="Buy to get more Money from wins.">Buy Bet Station: 10 $</span></button>
+					<button class="buyButtons"></button>
+			</div>
+
+			
+			<div class="hide" id="upgradeTab">
+				<p>You can only choose one</p>
+				<button class="buyButtons" id="scissors" onclick="choosePath('scissors')"><span title="2x $ with Scissors Wins">Choose Scissors 10000$</span></button>
+				<button class="buyButtons" id="paper" onclick="choosePath('paper')"><span title="2x $ with Paper Wins">Choose Paper 10000$</span></button>
+				<button class="buyButtons" id="rock" onclick="choosePath('rock')"><span title="2x $ with Rock Wins">Choose Rock 10000$</span></button>
+				<p>New Game Contents</p>
+				<button class="buyButtons">Buy Multiplayer</button>
+			</div>
+
+			
+			<div class="hide" id="statsTab">
+				
+			</div>
+
+			<p id="baldis">0 $</p>
+		</div>
+	</div>
+</body>
+</html>

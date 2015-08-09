@@ -1,0 +1,196 @@
+#buyingSpace > div > p {
+	font-size: 16px;
+	font-family: arial;
+	font-weight: bold;
+	color: darkgreen;
+}
+
+button {
+	background-color: lightgreen;
+	border: 5px outset green;
+}
+
+#s , #p , #r {
+	width: 160px;
+	height: 160px;
+	border-radius: 100px;
+	margin-top: 20px;
+}
+
+#s {
+	margin-left: 30px;
+}
+
+#p {
+	margin-left: 100px;
+}
+
+#r {
+	margin-left: 100px;
+}
+
+#looseorwin {
+	border: 4px inset green;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 25px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	background-color: lightgreen;
+	width: 150px;
+}
+
+h1 {
+	text-align: center;
+	color: darkgreen;
+
+}
+
+#baldis {
+	width: 193px;
+	border: 4px ridge blue;
+	background-color: #00ACFF;
+	border-bottom-right-radius: 20px;
+	text-align: center;
+	font-size: 20px;
+	position: absolute;
+	top: 510px;
+}
+
+#playField {
+	background-color: #FFFAF0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 750px;
+	height: 100%;
+	border: 10px outset green;
+	border-bottom-left-radius: 30px;
+	border-top-left-radius: 30px;
+	float: left;
+}
+
+#comdis {
+	background-color: lightgreen;
+	border-radius: 10px;
+	border: 6px inset green;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+	height: 100px;
+	position: relative;
+}
+
+button:focus {
+	outline:none;
+}
+
+button:hover{
+	cursor: pointer;
+	border: 5px inset darkred;
+	background-color: red;
+	color: darkred;
+}
+
+#looseorwin.loose, #comdis.loose {
+	border: 6px outset darkred;
+	background-color: red;
+}
+
+#looseorwin.pair, #comdis.pair {
+	border: 6px outset gold;
+	background-color: yellow;
+}
+
+#looseorwin.win, #comdis.win {
+	border: 6px outset green;
+	background-color: lightgreen;
+}
+
+#buyingSpace {
+	border: 10px outset green;
+	background-color: #FFFAF0;
+	border-bottom-right-radius: 30px;
+	width: 200px;
+	height: 100%;
+	float: left;
+}
+
+#main {
+	height: 550px;
+	position: relative;
+	left: 320px;
+}
+
+#buyTab {
+	border: 2px inset yellow;
+	position: relative;
+	width: 196px;
+	height: 86.5%;
+}
+
+#upgradeTab {
+	border: 2px inset blue;
+	position: relative;
+	width: 196px;
+	height: 86.5%;
+}
+
+#statsTab {
+	border: 2px inset purple;
+	position: relative;
+	width: 196px;
+	height: 86.5%;
+}
+
+#openStatsTab {
+	width: 74px;
+}
+
+#openBuyTab.openTabs, #openUpgradeTab.openTabs, #openStatsTab.openTabs  {
+	height: 50px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	position: relative;
+	top: -10px;
+}
+
+#openButtonContainer {	
+	width: 110%;
+	height: 40px;
+	position: relative;
+	right: 12px;
+	top: -10px;
+}
+
+.text {
+	font-size: 25px;
+	font-family: Arial;
+	font-weight: bold;
+	color: darkgreen;
+	float: left;
+}
+
+.hide {
+	display: none;
+}
+
+.buyButtons {
+	width: 200px;
+	height: 30px;
+	border-radius: 10px;
+	font-size: 15px;
+	color: black;
+	float: left;
+	border-radius: 0px;
+}
+
+.transparency {
+	opacity: 0.4;
+}
+
+.openTabsButtons {
+	width: 73px;
+	height: 40px;
+	position: relative;
+}

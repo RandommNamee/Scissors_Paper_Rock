@@ -1,4 +1,4 @@
-#buyingSpace > div > p {
+#buyingSpace > div > div > p {
 	font-size: 16px;
 	font-family: arial;
 	font-weight: bold;
@@ -39,6 +39,10 @@ button {
 	margin-top: 20px;
 	background-color: lightgreen;
 	width: 150px;
+}
+
+#newGameContents {
+	margin-top: 20px;
 }
 
 h1 {

@@ -1,3 +1,11 @@
+button:focus {
+	outline:none;
+}
+
+input:focus {
+	outline:none;
+}
+
 #recruitingTab > p {
 	font-size: 12px;
 }
@@ -27,13 +35,17 @@
 #s_p_r_rpgTab {
 	width: 700px;
 	height: 700px;
-	border: 2px outset red;
+	border: 8px outset green;
+	border-radius: 8px;
 	position: relative;
+	background-color: white;
 }
 
 #recruitingTab {
-	border: 2px outset blue;
-	width: 161px;
+	border-left: 8px outset green;
+	border-top: 8px inset green;
+	border-top-left-radius: 8px;
+	width: 160px;
 	height: 133px;
 	float: right;
 	position: absolute;
@@ -42,7 +54,9 @@
 }
 
 #dispResources {
-	border: 2px outset pink;
+	border-left: 8px outset green;
+	border-bottom: 8px outset green;
+	border-bottom-left-radius: 8px;
 	width: 290px;
 	height: 25px;
 	position: absolute;
@@ -52,24 +66,69 @@
 
 #fight {
 	position: absolute;
-	border: 2px outset yellow;
-	width: 20%;
-	margin-right: 0%;
+	border-right: 8px inset green;
+	border-bottom: 8px inset green;
+	width: 20.6%;
+	height: 518px;
 }
 
 #villageShop {
 	position: absolute;
-	border: 2px outset green;
+	border-left: 8px inset green;
+	border-top: 8px outset green;
+	border-top-left-radius: 8px;
+	border-bottom: 8px outset green;
+	border-bottom-left-radius: 8px;
 	width: 102px;
 	height: 172px;
+	right: 0;
+	bottom: 133px; 
+}
+
+#openMap {
+	position: absolute;
+	border: 2px outset gold; 
+	width: 10.5%;
+	left: 44.8%;
+	top: 9.3%;
+}
+
+#btn_village {
+	position: absolute;
+	left: 54px;
+	top: 170px;
+}
+
+#btn_town {
+	position: absolute;
+	left: 240px;
+	top: 115px;
+}
+
+#btn_city {
+	position: absolute;
+	left: 250px;
+	top: 300px;
+}
+
+#btn_stopFight {
+	position: absolute;
+	left: 178px;
+	top: 200px;
+}
+
+#map {
+	position: absolute;
+	border: 8px outset green;
+	border-radius: 8px;
+	width: 400px;
+	height: 422px;
+	left: 20.5%;
+	top: 12.6%;
 }
 
 .hide {
 	display: none;
-}
-
-.startStopFight {
-	margin-bottom: 20px;
 }
 
 .transparency {
@@ -82,3 +141,18 @@
 	text-align: left;
 	font-size: 10px;
 }
+
+.backgroundColor {
+	background-color: lightgreen;
+}
+
+.buttonClass {
+	border-top: 1px outset green;
+	border-bottom: 1px outset green;
+}
+
+
+
+
+
+

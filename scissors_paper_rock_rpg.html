@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div id="s_p_r_rpgTab">
-		<div id="dispResources">
+		<div class="backgroundColor" id="dispResources">
 			<p id="food">Food: 0</p>
 			<p id="wood">Wood: 0</p>
 			<p id="stone">Stone: 0</p>
@@ -15,7 +15,7 @@
 			<button id="btn_openMap" onclick="changeMapState('closeMap')">Open Map</button>
 			<button class="hide" id="btn_closeMap" onclick="changeMapState('openMap')">Close Map</button>
 		</div>
-		<div class="hide" id="map">
+		<div class="hide backgroundColor" id="map">
 			<div id="fightContainer">
 				<button id="btn_village">Village</button>
 				<button id="btn_town">Town</button>
@@ -23,7 +23,7 @@
 			</div>
 			<button class="hide" id="btn_stopFight">Stop Fight</button>
 		</div>
-		<div class="hide" id="fight">
+		<div class="hide backgroundColor" id="fight">
 			<button id="btn_archer">Archer</button>
 			<p id = "y_archer">Your Units 10</p>
 			<p id = "e_archer">Enemy Units 10</p>
@@ -40,13 +40,13 @@
 			<p id = "y_heavy">Your Units 10</p>
 			<p id = "e_heavy">Enemy Units 10</p>
 		</div>
-		<div id="villageShop">
+		<div id="villageShop" class="backgroundColor">
 			<button id="buyFarm" onclick="buyBuilding('farm')"><span text="">Buy Farm</span></button>
 			<button id="buyWoodcutter" onclick="buyBuilding('woodcutter')"><span text="">Buy Woodcutter</span></button>
 			<button id="buyQuarry" onclick="buyBuilding('quarry')"><span text="">Buy Quarry</span></button>
 			<button id="barracks" onclick="buyBuilding('barracks')"><span text="">Buy Barracks</span></button>
 		</div>
-		<div class="hide" id="recruitingTab">
+		<div class="hide backgroundColor" id="recruitingTab">
 			<p>Recruit <input id="recruitInp_archer"></input> <button class="btn_recruit" onclick="recruitUnits('archer')"><span text="1 Unit: 40 Food, 80 Wood, 30 Stone"> Archers</span></button></p>
 			<p>Recruit <input id="recruitInp_berserk"></input> <button class="btn_recruit" onclick="recruitUnits('berserk')"><span text="1 Unit: 70 Food, 50 Wood, 30 Stone"> Berserker</span></button></p>
 			<p>Recruit <input id="recruitInp_fast"></input> <button class="btn_recruit" onclick="recruitUnits('fast')"><span text="1 Unit: 90 Food, 60 Wood, 10 Stone"> Fast Units</span></button></p>

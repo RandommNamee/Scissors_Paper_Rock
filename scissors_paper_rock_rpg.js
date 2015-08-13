@@ -25,17 +25,27 @@ function clickFunc(key) {
 }
 
 var Game = {
-	speed: 6666,
+	speed: 66,
 	stopped: false
 };
 Game.loop = function() {
-	resources["food"] += Math.floor(1 + buildings["farm"] * (buildings["farm"] * 0.84));
-	resources["wood"] += Math.floor(1 + buildings["woodcutter"] * (buildings["woodcutter"] * 0.84));
-	resources["stone"] += Math.floor(1 + buildings["quarry"] * (buildings["quarry"] * 0.84));
-	updateResources();
-	save("resources", resources);
+	resSpeed += 1;
+	if (resSpeed >= 100) {
+		resources["food"] += Math.floor(1 + buildings["farm"] * (buildings["farm"] * 0.84));
+		resources["wood"] += Math.floor(1 + buildings["woodcutter"] * (buildings["woodcutter"] * 0.84));
+		resources["stone"] += Math.floor(1 + buildings["quarry"] * (buildings["quarry"] * 0.84));
+		updateResources();
+		save("resources", resources);
+		resSpeed = 0;
+	}
+	if (buildings.barracks = true) {
+		document.getElementById('barracks').classList.add("transparency")
+		document.getElementById('barracks').setAttribute("disabled", true)
+		document.getElementById("recruitingTab").classList.remove("hide")
+	}
 }
 
+var resSpeed = 0;
 var random = 0;
 var yUseableUnits = getLocalStorage("yUseableUnits", {
 	archer: 10,
@@ -247,10 +257,8 @@ function isAllZero(obj) {
 function changeFightState(id, aor) {
 	if (aor == "add") {
 		document.getElementById("fight").classList.add("hide");
-		document.getElementById("villageShop").classList.remove("hide");
 	}else {
 		document.getElementById("fight").classList.remove("hide");
-		document.getElementById("villageShop").classList.add("hide");
 	}
 	document.getElementById("fightContainer").classList.add("hide");
 	document.getElementById("btn_stopFight").classList.remove("hide");
@@ -291,7 +299,8 @@ function recruitUnits(type) {
 			document.getElementById("recruitInp_" + type).value = "";
 			removeResources(cost, count);
 		} else {
-			alert("You need " + (cost.food * count) + " Food, " + (cost.wood * count) + " Wood, " + (cost.stone * count) + " Stone")
+			alert("You need " + (cost.food * count) + " Food, " + (cost.wood * count) + " Wood, " + (cost.stone * count) + " Stone");
+			document.getElementById("recruitInp_" + type).value = "";	
 		}
 	} else {
 		document.getElementById("recruitInp_" + type).value = "";
@@ -396,7 +405,6 @@ function changeMapState(aor) {
 	document.getElementById('btn_closeMap').classList.add('hide');
 	document.getElementById('btn_openMap').classList.add('hide');
 	document.getElementById('btn_' + aor).classList.remove('hide');
-	document.getElementById('btn_stopFight').classList.add('hide');
 }
 
 function changeEUseableUnits(archer, berserk, fast, mage, heavy) {
@@ -415,9 +423,6 @@ function updateUnitsDisAll() {
 		document.getElementById('e_' + key).innerHTML = "Enemy Units " + eUseableUnits[key];
 	};
 }
-
-
-
 
 
 
